@@ -7,7 +7,7 @@ export DEBIAN_FRONTEND="noninteractive"
 
 pre_install() {
 	apt-get update
-	apt-get install -yq curl
+	apt-get install -yq curl xz-utils
 
 	echo "deb http://repo.aptly.info/ nightly main" > /etc/apt/sources.list.d/aptly.list || return 1
 	echo "deb http://nginx.org/packages/mainline/debian/ jessie nginx" > /etc/apt/sources.list.d/nginx.list || return 1
